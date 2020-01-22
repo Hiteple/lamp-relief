@@ -1,5 +1,11 @@
 import React from "react"
 
+import { FooterContainer } from "./styles"
+
 export const Footer = () => {
-  return <h2>Footer</h2>
+  return (
+    <FooterContainer>
+      <h2>Footer in progress</h2>
+    </FooterContainer>
+  )
 }
