@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { priceFormat } from "../utils/priceFormat"
 
 import Layout from "../components/Layout/layout"
 import {
@@ -22,7 +23,7 @@ const ProductsPage = ({ data }) => (
               alt={node.shopifyId}
             />
             <Title>{node.title}</Title>
-            <h4>${node.priceRange.minVariantPrice.amount}</h4>
+            <h4>${priceFormat(node.priceRange.minVariantPrice.amount)}</h4>
             <p>{node.description}</p>
           </Product>
         </Link>
