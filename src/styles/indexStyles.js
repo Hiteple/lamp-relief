@@ -1,4 +1,13 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const animateHeadings = keyframes`
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+`
 
 export const ImageContainer = styled.div`
   height: 700px;
@@ -19,11 +28,14 @@ export const TextContainer = styled.div`
   & h1,
   & h2 {
     color: #fff;
+    opacity: 0;
   }
   & h1 {
     font-size: 50px;
+    animation: ${animateHeadings} 2s 0.3s ease forwards;
   }
   & h2 {
+    animation: ${animateHeadings} 2s 0.8s ease forwards;
     font-size: 70px;
     margin-left: 60px;
     & span {

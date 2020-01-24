@@ -16,12 +16,9 @@ const ProductsPage = ({ data }) => (
     <Heading>Our lovely lamps</Heading>
     <Container>
       {data.allShopifyProduct.edges.map(({ node }) => (
-        <Link to={`/product/${node.handle}`}>
-          <Product key={node.shopifyId}>
-            <ProductImage
-              src={node.images[0].originalSrc}
-              alt={node.shopifyId}
-            />
+        <Link key={node.shopifyId} to={`/product/${node.handle}`}>
+          <Product>
+            <ProductImage src={node.images[0].originalSrc} alt={node.handle} />
             <Title>{node.title}</Title>
             <h4>${priceFormat(node.priceRange.minVariantPrice.amount)}</h4>
             <p>{node.description}</p>

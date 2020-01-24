@@ -4,6 +4,7 @@ export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 500;
   background-color: var(--main-color);
   padding: 30px 0;
   display: flex;
