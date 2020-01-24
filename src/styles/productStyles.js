@@ -11,6 +11,17 @@ const animateImage = keyframes`
    }
 `
 
+const animateButton = keyframes`
+0% {
+   opacity: 0;
+   transform: translateY(150%);
+}
+100% {
+   opacity: 1;
+   transform: translateY(0);
+}
+`
+
 export const SingleProductContainer = styled.section`
   display: flex;
   justify-content: space-around;
@@ -42,4 +53,24 @@ export const SingleProduct = styled.div`
       font-size: 25px;
     }
   }
+`
+
+export const AddToCart = styled.button`
+  background-color: var(--button-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 30px;
+  width: 200px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  &:hover {
+    border: 1px solid #00cec9;
+    background-color: #fff;
+    color: var(--button-color);
+  }
+  animation: ${animateButton} 2s 1s ease forwards;
 `

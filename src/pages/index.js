@@ -2,7 +2,9 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import { ImageContainer, TextContainer } from "../styles/indexStyles"
+import { ImageContainer, TextContainer, Benefits } from "../styles/indexStyles"
+import { GiTakeMyMoney } from "react-icons/gi"
+import { MdMood, MdWbIncandescent } from "react-icons/md"
 
 const IndexPage = ({ data }) => {
   return (
@@ -16,34 +18,28 @@ const IndexPage = ({ data }) => {
           </h2>
         </TextContainer>
       </ImageContainer>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
-      <p>Height testing for parallax in hero</p>
+
+      <Benefits>
+        <div>
+          <GiTakeMyMoney
+            style={{ fontSize: "60px", color: "var(--button-color)" }}
+          />
+          <h2>Nice price/quality relationship</h2>
+          <p>because we offer you what you deserve</p>
+        </div>
+        <div>
+          <MdWbIncandescent
+            style={{ fontSize: "60px", color: "var(--button-color)" }}
+          />
+          <h2>Low consumption</h2>
+          <p>as a part of our promise and responsibility</p>
+        </div>
+        <div>
+          <MdMood style={{ fontSize: "60px", color: "var(--button-color)" }} />
+          <h2>Guaranteed satisfaction</h2>
+          <p>because confidence will be our bond</p>
+        </div>
+      </Benefits>
     </Layout>
   )
 }

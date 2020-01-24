@@ -1,4 +1,13 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const animateProduct = keyframes`
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+`
 
 export const Heading = styled.h1`
   text-align: center;
@@ -33,6 +42,8 @@ export const Product = styled.div`
   transition: all 0.6s ease;
   border: none;
   border-radius: 30px;
+  opacity: 0;
+  animation: ${animateProduct} 0.8s ease forwards;
   &:hover {
     background-color: #eee;
   }

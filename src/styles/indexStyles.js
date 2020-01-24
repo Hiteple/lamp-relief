@@ -44,3 +44,23 @@ export const TextContainer = styled.div`
     }
   }
 `
+
+export const Benefits = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  max-width: 100%;
+  padding: 70px 0;
+  justify-content: space-around;
+  & div {
+    text-align: center;
+    margin: 0 20px;
+    & h2 {
+      font-weight: 300;
+      margin: 0;
+    }
+    & p {
+      margin-top: 10px;
+    }
+  }
+`
