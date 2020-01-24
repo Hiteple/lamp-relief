@@ -2,7 +2,12 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import { ImageContainer, TextContainer, Benefits } from "../styles/indexStyles"
+import {
+  ImageContainer,
+  TextContainer,
+  Benefits,
+  Gallery,
+} from "../styles/indexStyles"
 import { GiTakeMyMoney } from "react-icons/gi"
 import { MdMood, MdWbIncandescent } from "react-icons/md"
 
@@ -40,6 +45,43 @@ const IndexPage = ({ data }) => {
           <p>because confidence will be our bond</p>
         </div>
       </Benefits>
+
+      <Gallery>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+        <p>TEST ESPACIO</p>
+      </Gallery>
     </Layout>
   )
 }

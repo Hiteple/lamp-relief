@@ -54,7 +54,7 @@ export const Benefits = styled.section`
   justify-content: space-around;
   & div {
     text-align: center;
-    margin: 0 20px;
+    min-width: 400px;
     & h2 {
       font-weight: 300;
       margin: 0;
@@ -62,5 +62,12 @@ export const Benefits = styled.section`
     & p {
       margin-top: 10px;
     }
+  }
+`
+
+export const Gallery = styled.section`
+  background-color: red;
+  & p {
+    margin: 0;
   }
 `

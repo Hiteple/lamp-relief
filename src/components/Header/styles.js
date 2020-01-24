@@ -8,10 +8,15 @@ export const HeaderContainer = styled.header`
   background-color: var(--main-color);
   padding: 30px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   & h1 {
     margin: 0;
+    font-family: "Nunito";
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 4px;
   }
   & h1 a {
     margin-left: 30px;
