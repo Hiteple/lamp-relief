@@ -54,6 +54,7 @@ export const Product = styled.div`
   & p {
     color: #000;
     font-weight: 600;
+    font-size: 16px;
   }
 `
 
