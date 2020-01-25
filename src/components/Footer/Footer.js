@@ -12,19 +12,16 @@ export const Footer = () => {
       <Company>
         <h2>Company</h2>
         <li>
-          <Link to="/">Customer service</Link>
+          <Link to="/terms">Terms of service</Link>
         </li>
         <li>
-          <Link to="/">Terms of use</Link>
+          <Link to="/privacy-policy">Privacy policy</Link>
         </li>
         <li>
-          <Link to="/">Privacy policy</Link>
+          <Link to="/refund-policy">Refund Policy</Link>
         </li>
         <li>
-          <Link to="/">Careers</Link>
-        </li>
-        <li>
-          <Link to="/">About us</Link>
+          <Link to="/about">About us</Link>
         </li>
       </Company>
       <Contact>
