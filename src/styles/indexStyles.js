@@ -65,9 +65,37 @@ export const Benefits = styled.section`
   }
 `
 
+export const Welcome = styled.div`
+  height: 400px;
+  padding: 40px 300px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  & h2 {
+    margin: 0;
+    font-size: 50px;
+    letter-spacing: 4px;
+    font-weight: 300;
+  }
+  & p {
+     margin-top 30px;
+    font-size: 20px;
+    line-height: 40px;
+  }
+  & p span {
+    color: var(--button-color);
+  }
+`
+
 export const Gallery = styled.section`
-  background-color: red;
+  background-color: #aaa;
+  padding: 20px 0;
+  text-align: center;
   & p {
     margin: 0;
+    color: #fff;
   }
 `

@@ -7,6 +7,7 @@ import {
   TextContainer,
   Benefits,
   Gallery,
+  Welcome,
 } from "../styles/indexStyles"
 import { GiTakeMyMoney } from "react-icons/gi"
 import { MdMood, MdWbIncandescent } from "react-icons/md"
@@ -46,41 +47,20 @@ const IndexPage = ({ data }) => {
         </div>
       </Benefits>
 
+      <Welcome>
+        <h2>Welcome to Lamp Relief!</h2>
+        <p>
+          We're glad you came by. Please do check on our beloved lamps, we{" "}
+          <span>know</span> you'll find that unique one that'll please you. The
+          process is quite simple: you add the lamp you want to the cart and
+          then proced to a secure checkout (then you'll be able to add the
+          shipping information). <br />
+          And that's it! Simple, right?
+        </p>
+      </Welcome>
+
       <Gallery>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
-        <p>TEST ESPACIO</p>
+        <p>gallery here</p>
       </Gallery>
     </Layout>
   )
