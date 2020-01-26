@@ -55,7 +55,7 @@ export const SingleProduct = styled.div`
   }
 `
 
-export const AddToCart = styled.button`
+export const OkButton = styled.button`
   background-color: var(--button-color);
   padding: 10px 20px;
   border: none;

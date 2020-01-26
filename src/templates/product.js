@@ -3,7 +3,7 @@ import Layout from "../components/Layout/layout"
 import {
   SingleProductContainer,
   SingleProduct,
-  AddToCart,
+  OkButton,
 } from "../styles/productStyles"
 import { ProductImage } from "../styles/productsStyles"
 import { priceFormat } from "../utils/priceFormat"
@@ -36,7 +36,7 @@ const ProductTemplate = ({ pageContext }) => {
             </p>
             <p>{product.description}</p>
             <p>Weight: {product.variants[0].weight} Kg</p>
-            <AddToCart>Add to cart</AddToCart>
+            <OkButton>Add to cart</OkButton>
           </div>
         </SingleProduct>
       </SingleProductContainer>

@@ -6,13 +6,17 @@ import {
   ImageContainer,
   TextContainer,
   Benefits,
-  Gallery,
   Welcome,
+  Materials,
+  MaterialsContainer,
+  Inspiration,
+  Newsletter,
 } from "../styles/indexStyles"
 import { GiTakeMyMoney } from "react-icons/gi"
 import { MdMood, MdWbIncandescent } from "react-icons/md"
 
 const IndexPage = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
       <SEO title="Home" />
@@ -59,9 +63,81 @@ const IndexPage = ({ data }) => {
         </p>
       </Welcome>
 
-      <Gallery>
-        <p>gallery here</p>
-      </Gallery>
+      <Materials>
+        <h3>
+          Our <span>skills</span> cover all of this:
+        </h3>
+        <MaterialsContainer
+          materialOne={data.allFile.edges[4].node.publicURL}
+          materialTwo={data.allFile.edges[3].node.publicURL}
+          materialThree={data.allFile.edges[6].node.publicURL}
+          materialFour={data.allFile.edges[2].node.publicURL}
+          materialFive={data.allFile.edges[8].node.publicURL}
+        >
+          <div>
+            <article>
+              <h4>Fabric</h4>
+              <p>
+                We make use of of this one to achieve elegant lamps, reminding
+                vintage life
+              </p>
+            </article>
+          </div>
+          <div>
+            <article>
+              <h4>Glass</h4>
+              <p>
+                Don't we all like when the transparency of things let us know
+                what is inside?
+              </p>
+            </article>
+          </div>
+          <div>
+            <article>
+              <h4>Wood</h4>
+              <p>
+                Classical taste (or is it <em>retro</em> nowadays?...)
+                <br /> Yet very durable ones!
+              </p>
+            </article>
+          </div>
+          <div>
+            <article>
+              <h4>Metal</h4>
+              <p>
+                We use this for little decorations mostly, but some lamps even
+                have bigger metal parts too!
+              </p>
+            </article>
+          </div>
+          <div>
+            <article>
+              <h4>Ceramic</h4>
+              <p>
+                We try to resemble asian-like pieces sometimes, inspired by
+                their bowls and cup teas
+              </p>
+            </article>
+          </div>
+        </MaterialsContainer>
+      </Materials>
+
+      <Inspiration inspiration={data.allFile.edges[7].node.publicURL}>
+        <p>
+          Our <span>goal</span> is to bring you a little shine from our hearts
+        </p>
+      </Inspiration>
+      <br />
+      <br />
+
+      <Newsletter>
+        <h4>Want to recieve news on our products?</h4>
+        <form>
+          <input type="text" placeholder="Enter your name" />
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Count me in!</button>
+        </form>
+      </Newsletter>
     </Layout>
   )
 }
