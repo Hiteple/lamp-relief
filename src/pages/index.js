@@ -132,7 +132,8 @@ const IndexPage = ({ data }) => {
 
       <Newsletter>
         <h4>Want to recieve news on our products?</h4>
-        <form>
+        <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+          <input type="hidden" name="bot-field" />
           <input type="text" placeholder="Enter your name" />
           <input type="email" placeholder="Enter your email" />
           <button type="submit">Count me in!</button>
