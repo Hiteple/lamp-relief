@@ -2,10 +2,10 @@ import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { CartContext } from "../../context"
-
 import { HeaderContainer, Menu, Badge } from "./styles"
 
 const Header = () => {
+  const { toggleCart } = useContext(CartContext)
   const { cart } = useContext(CartContext)
 
   return (
@@ -22,9 +22,9 @@ const Header = () => {
             <Link to="/about">About us</Link>
           </li>
           <li>
-            <Link to="/" style={{ position: "relative" }}>
+            <button onClick={toggleCart} style={{ position: "relative" }}>
               Cart {cart.length > 0 && <Badge>{cart.length}</Badge>}
-            </Link>
+            </button>
           </li>
         </Menu>
       </nav>

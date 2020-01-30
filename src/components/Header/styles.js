@@ -38,6 +38,16 @@ export const Menu = styled.ul`
     margin: 0 20px;
     text-decoration: none;
   }
+  & li button {
+    color: #fff;
+    font-size: 25px;
+    margin: 0 20px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
 `
 
 export const Badge = styled.div`

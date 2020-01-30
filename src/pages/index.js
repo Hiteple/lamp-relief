@@ -18,6 +18,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SEO title="Home" />
+
       <ImageContainer url={data.allFile.edges[3].node.publicURL}>
         <TextContainer>
           <h1>You come for the style</h1>
