@@ -1,13 +1,14 @@
 import React from "react"
-import Layout from "../components/Layout/layout"
 import { graphql } from "gatsby"
 import { Container, ImageContainer, AboutText } from "../styles/aboutStyles"
+import { SEO } from "../components"
 import us from "../images/us-min.jpg"
 
 const About = ({ data }) => {
   console.log(data)
   return (
-    <Layout>
+    <>
+      <SEO title="About" />
       <Container>
         <ImageContainer>
           <img src={us} alt="{us}" />
@@ -20,7 +21,7 @@ const About = ({ data }) => {
           ></p>
         </AboutText>
       </Container>
-    </Layout>
+    </>
   )
 }
 

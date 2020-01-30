@@ -6,7 +6,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([])
 
   const addToCart = element => {
-    return setCart([...cart, element])
+    setCart([...cart, element])
   }
 
   return (

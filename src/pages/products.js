@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { SEO } from "../components"
 import { priceFormat } from "../utils/priceFormat"
 
-import Layout from "../components/Layout/layout"
 import {
   Container,
   ProductImage,
@@ -12,7 +12,8 @@ import {
 } from "../styles/productsStyles"
 
 const ProductsPage = ({ data }) => (
-  <Layout>
+  <>
+    <SEO title="Products" />
     <Heading>Our lovely lamps</Heading>
     <Container>
       {data.allShopifyProduct.edges.map(({ node }) => (
@@ -26,7 +27,7 @@ const ProductsPage = ({ data }) => (
         </Link>
       ))}
     </Container>
-  </Layout>
+  </>
 )
 
 export default ProductsPage

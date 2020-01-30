@@ -1,12 +1,13 @@
 import React from "react"
-import Layout from "../components/Layout/layout"
 import { graphql } from "gatsby"
+import { SEO } from "../components"
 import { Container } from "../styles/policyStyles"
 
 const Terms = ({ data }) => {
   console.log(data)
   return (
-    <Layout>
+    <>
+      <SEO title="Terms" />
       <Container>
         <h1>{data.allShopifyShopPolicy.edges[2].node.title}</h1>
         <p
@@ -15,7 +16,7 @@ const Terms = ({ data }) => {
           }}
         ></p>
       </Container>
-    </Layout>
+    </>
   )
 }
 

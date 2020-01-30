@@ -39,3 +39,22 @@ export const Menu = styled.ul`
     text-decoration: none;
   }
 `
+
+export const Badge = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #00cec9;
+  color: var(--button-color);
+  font-size: 16px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  margin-right: -20px;
+  margin-top: -20px;
+  z-index: -1;
+`

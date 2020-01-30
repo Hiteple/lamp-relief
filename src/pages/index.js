@@ -1,6 +1,5 @@
 import React from "react"
-import Layout from "../components/Layout/layout"
-import SEO from "../components/seo"
+import { SEO } from "../components"
 import { graphql } from "gatsby"
 import {
   ImageContainer,
@@ -16,11 +15,10 @@ import { GiTakeMyMoney } from "react-icons/gi"
 import { MdMood, MdWbIncandescent } from "react-icons/md"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
-      <ImageContainer url={data.allFile.edges[0].node.publicURL}>
+      <ImageContainer url={data.allFile.edges[3].node.publicURL}>
         <TextContainer>
           <h1>You come for the style</h1>
           <h2>
@@ -68,11 +66,11 @@ const IndexPage = ({ data }) => {
           Our <span>skills</span> cover all of this:
         </h3>
         <MaterialsContainer
-          materialOne={data.allFile.edges[4].node.publicURL}
-          materialTwo={data.allFile.edges[3].node.publicURL}
-          materialThree={data.allFile.edges[6].node.publicURL}
+          materialOne={data.allFile.edges[6].node.publicURL}
+          materialTwo={data.allFile.edges[5].node.publicURL}
+          materialThree={data.allFile.edges[7].node.publicURL}
           materialFour={data.allFile.edges[2].node.publicURL}
-          materialFive={data.allFile.edges[8].node.publicURL}
+          materialFive={data.allFile.edges[4].node.publicURL}
         >
           <div>
             <article>
@@ -122,7 +120,7 @@ const IndexPage = ({ data }) => {
         </MaterialsContainer>
       </Materials>
 
-      <Inspiration inspiration={data.allFile.edges[7].node.publicURL}>
+      <Inspiration inspiration={data.allFile.edges[0].node.publicURL}>
         <p>
           Our <span>goal</span> is to bring you a little shine from our hearts
         </p>
@@ -139,7 +137,7 @@ const IndexPage = ({ data }) => {
           <button type="submit">Count me in!</button>
         </form>
       </Newsletter>
-    </Layout>
+    </>
   )
 }
 

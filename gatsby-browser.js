@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 
 const React = require("react")
-const Layout = require("./src/components/Layout/layout")
+const Layout = require("./src/components/Layout/layout").default
 const { CartProvider } = require("./src/context")
 
 exports.wrapRootElement = ({ element }) => {
