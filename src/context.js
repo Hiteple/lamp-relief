@@ -10,8 +10,12 @@ export const CartProvider = ({ children }) => {
     setCart([...cart, element])
   }
 
-  const removeFromCart = element => {
-    console.log(element)
+  const removeFromCart = productIndex => {
+    const cartToFilter = Object.assign([], cart)
+
+    cartToFilter.splice(productIndex, 1)
+
+    setCart(cartToFilter)
   }
 
   const toggleCart = () => {

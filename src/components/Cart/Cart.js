@@ -15,6 +15,10 @@ const Cart = () => {
     }
   }
 
+  const handleRemoveFromCart = index => {
+    removeFromCart(index)
+  }
+
   getTotals()
 
   return (
@@ -27,10 +31,10 @@ const Cart = () => {
               <p>Check out our lamps to add something here!</p>
             </div>
           )}
-          {cart.map(item => {
+          {cart.map((item, index) => {
             return (
               <div
-                key={item.handle}
+                key={index}
                 style={{ border: "1px solid #00cec9", margin: "20px 0" }}
               >
                 <Item>
@@ -38,7 +42,9 @@ const Cart = () => {
                     <h4>{item.title}</h4>
                     <p>${priceFormat(item.variants[0].compareAtPrice)}</p>
                   </div>
-                  <button onClick={removeFromCart}>Remove</button>
+                  <button onClick={handleRemoveFromCart.bind(this, index)}>
+                    Remove
+                  </button>
                 </Item>
                 <ItemImage url={item.images[0].originalSrc} />
               </div>

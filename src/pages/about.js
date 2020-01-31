@@ -5,7 +5,6 @@ import { SEO } from "../components"
 import us from "../images/us-min.jpg"
 
 const About = ({ data }) => {
-  console.log(data)
   return (
     <>
       <SEO title="About" />
