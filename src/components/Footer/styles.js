@@ -14,6 +14,9 @@ export const FooterContainer = styled.footer`
     margin: 20px 0;
     color: #fff;
   }
+  & .media-heading {
+    text-align: center;
+  }
 `
 
 export const Company = styled.ul`
@@ -43,7 +46,7 @@ export const Media = styled.ul`
   list-style: none;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   min-width: 200px;
   & li {
@@ -51,6 +54,7 @@ export const Media = styled.ul`
     font-size: 25px;
     & a:first-child {
       color: #fff;
+      padding: 10px 10px 6px 10px;
       transition: all .2s ease;
     }
     & a:first-child: hover {

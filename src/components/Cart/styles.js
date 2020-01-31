@@ -44,6 +44,21 @@ export const CartContainer = styled.div`
     background-color: #fff;
     padding: 5px 10px;
   }
+  & .checkout {
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--button-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  & .checkout:hover {
+    background-color: #fff;
+    color: var(--button-color);
+    border: 1px solid #00cec9;
+  }
 `
 
 export const CartItems = styled.div`

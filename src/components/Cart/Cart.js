@@ -52,7 +52,10 @@ const Cart = () => {
           })}
         </CartItems>
         {cart.length > 0 && (
-          <p className="total">Total: ${priceFormat(total)}</p>
+          <>
+            <p className="total">Total: ${priceFormat(total)}</p>
+            <button className="checkout">Proceed to checkout</button>
+          </>
         )}
       </CartContainer>
     </>
