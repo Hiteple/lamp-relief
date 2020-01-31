@@ -3,8 +3,7 @@ import { CartContext } from "../../context"
 import { priceFormat } from "../../utils/priceFormat"
 import { CartContainer, CartItems, Item, ItemImage } from "./styles"
 
-const Cart = props => {
-  console.log(props)
+const Cart = () => {
   let total
   const { cart, removeFromCart } = useContext(CartContext)
 
