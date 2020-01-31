@@ -1,10 +1,12 @@
 import React, { useContext } from "react"
 import { CartContext } from "../../context"
+import { priceFormat } from "../../utils/priceFormat"
 import { CartContainer, CartItems, Item, ItemImage } from "./styles"
 
-const Cart = () => {
+const Cart = props => {
+  console.log(props)
   let total
-  const { cart } = useContext(CartContext)
+  const { cart, removeFromCart } = useContext(CartContext)
 
   const getTotals = () => {
     if (cart.length > 0) {
@@ -21,27 +23,32 @@ const Cart = () => {
       <CartContainer>
         <CartItems>
           {cart.length === 0 && (
-            <div>
+            <div className="cartEmpty">
               <h4>It seems your cart is empty :(</h4>
               <p>Check out our lamps to add something here!</p>
             </div>
           )}
           {cart.map(item => {
             return (
-              <div style={{ border: "1px solid #00cec9", margin: "20px 0" }}>
-                <Item key={item.title}>
+              <div
+                key={item.handle}
+                style={{ border: "1px solid #00cec9", margin: "20px 0" }}
+              >
+                <Item>
                   <div>
                     <h4>{item.title}</h4>
-                    <p>{item.variants[0].compareAtPrice}</p>
+                    <p>${priceFormat(item.variants[0].compareAtPrice)}</p>
                   </div>
-                  <button>Remove</button>
+                  <button onClick={removeFromCart}>Remove</button>
                 </Item>
-                <ItemImage key={item.handle} url={item.images[0].originalSrc} />
+                <ItemImage url={item.images[0].originalSrc} />
               </div>
             )
           })}
         </CartItems>
-        {cart.length > 0 && <p>Total: ${total}</p>}
+        {cart.length > 0 && (
+          <p className="total">Total: ${priceFormat(total)}</p>
+        )}
       </CartContainer>
     </>
   )

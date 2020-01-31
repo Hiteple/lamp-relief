@@ -37,6 +37,13 @@ export const CartContainer = styled.div`
   justify-content: center;
   opacity: 0;
   animation: ${animatedCart} 0.3s ease both;
+  & .total {
+    text-align: center;
+    margin-top: 20px;
+    width: 150px;
+    background-color: #fff;
+    padding: 5px 10px;
+  }
 `
 
 export const CartItems = styled.div`
@@ -44,7 +51,7 @@ export const CartItems = styled.div`
   min-height: 700px;
   max-height: 700px;
   overflow: scroll;
-  width: 400px;
+  min-width: 400px;
   padding: 40px;
 `
 
@@ -70,6 +77,7 @@ export const Item = styled.div`
     color: #fff;
     font-size: 13px;
     cursor: pointer;
+    outline: none;
   }
 `
 

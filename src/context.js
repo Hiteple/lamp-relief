@@ -7,10 +7,11 @@ export const CartProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const addToCart = element => {
-    //  if (!cart.length) {
     setCart([...cart, element])
-    //  }
-    console.log(cart)
+  }
+
+  const removeFromCart = element => {
+    console.log(element)
   }
 
   const toggleCart = () => {
@@ -22,6 +23,7 @@ export const CartProvider = ({ children }) => {
       value={{
         cart,
         addToCart,
+        removeFromCart,
         isOpen,
         toggleCart,
       }}
