@@ -35,7 +35,7 @@ export const Footer = () => {
         </Contact>
       </div>
       <div>
-        <h2 class="media-heading">Media</h2>
+        <h2 className="media-heading">Media</h2>
         <Media>
           <li>
             <Link to="/">

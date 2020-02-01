@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Lamp Relief`,
@@ -6,6 +10,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-stripe`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -40,6 +45,13 @@ module.exports = {
         shopName: `lamp-relief.myshopify.com`,
         // The storefront access token
         accessToken: `d5cef265b8f383cdf959362eda8dccef`,
+      },
+    },
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ["Sku"],
+        secretKey: process.env.STRIPE_SK,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

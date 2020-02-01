@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { CartContext } from "../../context"
 import { priceFormat } from "../../utils/priceFormat"
 import { CartContainer, CartItems, Item, ItemImage } from "./styles"
@@ -6,6 +6,7 @@ import { CartContainer, CartItems, Item, ItemImage } from "./styles"
 const Cart = () => {
   let total
   const { cart, removeFromCart } = useContext(CartContext)
+  const [stripe, setStripe] = useState()
 
   const getTotals = () => {
     if (cart.length > 0) {
@@ -19,7 +20,32 @@ const Cart = () => {
     removeFromCart(index)
   }
 
+  const handleSubmit = async e => {
+    e.preventDefault()
+
+    const { error } = await stripe.redirectToCheckout({
+      items: cart.map(item => ({
+        sku: "ID HERE",
+        quantity: item.quantity,
+      })),
+      successUrl: process.env.SUCCESS_REDIRECT,
+      cancelUrl: process.env.CANCEL_REDIRECT,
+    })
+
+    if (error) {
+      throw new Error(error)
+    }
+  }
+
   getTotals()
+
+  useEffect(() => {
+    setStripe(
+      window.Stripe(process.env.STRIPE_PK, {
+        betas: ["checkout_beta_4"],
+      })
+    )
+  }, [])
 
   return (
     <>
@@ -54,7 +80,13 @@ const Cart = () => {
         {cart.length > 0 && (
           <>
             <p className="total">Total: ${priceFormat(total)}</p>
-            <button className="checkout">Proceed to checkout</button>
+            <button
+              onClick={handleSubmit}
+              disabled={cart.length === 0}
+              className="checkout"
+            >
+              Proceed to checkout
+            </button>
           </>
         )}
       </CartContainer>

@@ -4,7 +4,6 @@ import { SEO } from "../components"
 import { Container } from "../styles/policyStyles"
 
 const RefundPolicy = ({ data }) => {
-  console.log(data)
   return (
     <>
       <SEO title="Refunds" />

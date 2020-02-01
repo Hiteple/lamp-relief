@@ -7,6 +7,7 @@ export const CartProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const addToCart = element => {
+    element.quantity = 1
     setCart([...cart, element])
   }
 

@@ -32,6 +32,20 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allStripeSku {
+        edges {
+          node {
+            id
+            price
+            product {
+              name
+              metadata {
+                description
+              }
+            }
+          }
+        }
+      }
     }
   `)
 
