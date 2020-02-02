@@ -10,7 +10,9 @@ const Cart = () => {
 
   const getTotals = () => {
     if (cart.length > 0) {
-      const prices = cart.map(price => price.variants[0].compareAtPrice)
+      const prices = cart.map(
+        price => price.variants[0].compareAtPrice * price.quantity
+      )
 
       total = prices.reduce((acum, val) => parseInt(acum) + parseInt(val))
     }
@@ -66,7 +68,12 @@ const Cart = () => {
                 <Item>
                   <div>
                     <h4>{item.title}</h4>
-                    <p>${priceFormat(item.variants[0].compareAtPrice)}</p>
+                    <p>
+                      $
+                      {priceFormat(item.variants[0].compareAtPrice) *
+                        item.quantity}
+                    </p>
+                    <p>Quantity: {item.quantity}</p>
                   </div>
                   <button onClick={handleRemoveFromCart.bind(this, index)}>
                     Remove

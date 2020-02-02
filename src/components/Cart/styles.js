@@ -53,6 +53,7 @@ export const CartContainer = styled.div`
     cursor: pointer;
     transition: all 0.2s ease;
     border: 1px solid transparent;
+    outline: none;
   }
   & .checkout:hover {
     background-color: #fff;
@@ -78,6 +79,7 @@ export const Item = styled.div`
   padding: 30px;
   background-color: #fff;
   opacity: 0;
+  padding: 10px 0;
   animation: ${animatedItems} 0.2s ease forwards;
   & h4,
   & p {
