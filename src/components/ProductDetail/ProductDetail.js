@@ -4,10 +4,11 @@ import { CartContext } from "../../context"
 import { ProductImage } from "../../styles/productsStyles"
 import { priceFormat } from "../../utils/priceFormat"
 
-const ProductDetail = ({ product }) => {
+const ProductDetail = ({ product, sku }) => {
   const { addToCart } = useContext(CartContext)
 
   const handleSubmit = () => {
+    product.sku = sku
     addToCart(product)
   }
 

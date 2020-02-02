@@ -49,13 +49,18 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  results.data.allShopifyProduct.edges.forEach(({ node }) => {
-    createPage({
-      path: `/product/${node.handle}`,
-      component: path.resolve(`./src/templates/product.js`),
-      context: {
-        product: node,
-      },
+  results.data.allStripeSku.edges.forEach(item => {
+    results.data.allShopifyProduct.edges.forEach(({ node }) => {
+      if (item.node.product.name === node.title) {
+        createPage({
+          path: `/product/${node.handle}`,
+          component: path.resolve(`./src/templates/product.js`),
+          context: {
+            product: node,
+            sku: item,
+          },
+        })
+      }
     })
   })
 }

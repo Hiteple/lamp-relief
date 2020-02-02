@@ -25,7 +25,7 @@ const Cart = () => {
 
     const { error } = await stripe.redirectToCheckout({
       items: cart.map(item => ({
-        sku: "ID HERE",
+        sku: item.sku.node.id,
         quantity: item.quantity,
       })),
       successUrl: process.env.SUCCESS_REDIRECT,
