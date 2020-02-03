@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "../../responsive"
 
 export const HeaderContainer = styled.header`
   position: fixed;
@@ -22,6 +23,14 @@ export const HeaderContainer = styled.header`
     margin-left: 30px;
     color: #fff;
     text-decoration: none;
+
+    @media only screen and ${device.tablet} {
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and ${device.tablet} {
+    justify-content: center;
   }
 `
 export const Menu = styled.ul`
