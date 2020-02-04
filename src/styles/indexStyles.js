@@ -22,6 +22,9 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   margin-top: 104px;
+  @media only screen and ${device.mobileM} {
+    background-position: 75% 80px;
+  }
 `
 
 export const TextContainer = styled.div`
@@ -64,6 +67,11 @@ export const TextContainer = styled.div`
       font-size: 35px;
       margin: 20px 0 0 0;
     }
+  }
+
+  @media only screen and ${device.mobileM} {
+    margin: 300px 0 0 0;
+    text-align: center;
   }
 `
 
@@ -163,6 +171,12 @@ export const Materials = styled.section`
     letter-spacing: 3px;
     & span {
       color: var(--button-color);
+    }
+  }
+
+  @media only screen and ${device.mobileM} {
+    & h3 {
+      font-size: 20px;
     }
   }
 `
@@ -376,9 +390,9 @@ export const MaterialsContainer = styled.div`
     max-width: 780px;
   }
   @media only screen and ${device.tablet} {
-    max-width: 400px;
+    max-width: 350px;
     flex-direction: column;
-    min-height: 1500px;
+    min-height: 2500px;
     border-top-right-radius: 30px;
 
     &:hover > div {

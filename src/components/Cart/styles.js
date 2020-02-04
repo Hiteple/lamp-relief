@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import { device } from "../../responsive"
 
 const animatedCart = keyframes`
    0% {
@@ -24,7 +25,7 @@ const animatedItems = keyframes`
 
 export const CartContainer = styled.div`
   height: 100vh;
-  width: 25vw;
+  width: 30vw;
   background-color: var(--main-color);
   position: fixed;
   z-index: 499;
@@ -60,6 +61,17 @@ export const CartContainer = styled.div`
     color: var(--button-color);
     border: 1px solid #00cec9;
   }
+
+  @media only screen and ${device.laptopL} {
+    width: 40vw;
+  }
+  @media only screen and ${device.laptop} {
+    width: 60vw;
+  }
+  @media only screen and ${device.tablet} {
+    width: 100vw;
+    padding: 0 30px;
+  }
 `
 
 export const CartItems = styled.div`
@@ -69,6 +81,12 @@ export const CartItems = styled.div`
   overflow: scroll;
   min-width: 400px;
   padding: 40px;
+  @media only screen and ${device.tablet} {
+    padding-top: 80px;
+  }
+  @media only screen and ${device.mobileM} {
+    padding-top: 200px;
+  }
 `
 
 export const Item = styled.div`

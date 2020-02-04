@@ -57,6 +57,28 @@ export const Menu = styled.ul`
     cursor: pointer;
     outline: none;
   }
+  @media only screen and ${device.tablet} {
+    margin-top: 30px;
+    & li a {
+      font-size: 20px;
+    }
+    & li button {
+      font-size: 20px;
+    }
+  }
+  @media only screen and ${device.mobileM} {
+    flex-direction: column;
+    margin-top: 20px;
+    & li {
+      margin: 10px 0;
+    }
+    & li a {
+      font-size: 18px;
+    }
+    & li button {
+      font-size: 18px;
+    }
+  }
 `
 
 export const Badge = styled.div`
@@ -76,4 +98,8 @@ export const Badge = styled.div`
   margin-right: -20px;
   margin-top: -20px;
   z-index: -1;
+  @media only screen and ${device.mobileM} {
+    top: 20px;
+    right: -25px;
+  }
 `

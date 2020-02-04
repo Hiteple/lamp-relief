@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "../../responsive"
 
 export const FooterContainer = styled.footer`
   background-color: var(--button-color);
@@ -17,6 +18,12 @@ export const FooterContainer = styled.footer`
   & .media-heading {
     text-align: center;
   }
+
+  @media only screen and ${device.tablet} {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `
 
 export const Company = styled.ul`
@@ -30,6 +37,11 @@ export const Company = styled.ul`
     }
   }
   min-width: 200px;
+
+  @media only screen and ${device.tablet} {
+    width: 250px;
+    text-align: center;
+  }
 `
 
 export const Contact = styled.ul`
@@ -40,6 +52,11 @@ export const Contact = styled.ul`
     color: #fff;
   }
   min-width: 200px;
+
+  @media only screen and ${device.tablet} {
+    width: 250px;
+    text-align: center;
+  }
 `
 
 export const Media = styled.ul`
@@ -65,4 +82,8 @@ export const Media = styled.ul`
       border-radius 50%;
     }
   }
+
+  @media only screen and ${device.tablet} {
+   width: 200px;
+ }
 `
