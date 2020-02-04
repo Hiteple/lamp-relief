@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import { device } from "../responsive"
 
 const animateProduct = keyframes`
    0% {
@@ -29,6 +30,13 @@ export const Container = styled.div`
     text-decoration: none;
     margin: 30px;
   }
+
+  @media only screen and ${device.tablet} {
+    padding-top: 40px;
+  }
+  @media only screen and ${device.mobileM} {
+    padding-top: 90px;
+  }
 `
 
 export const Product = styled.div`
@@ -56,6 +64,22 @@ export const Product = styled.div`
     font-weight: 600;
     font-size: 16px;
   }
+
+  @media only screen and ${device.laptop} {
+    border: 1px solid #000;
+    min-height: 600px;
+    border-radius: 30px;
+    padding: 0;
+  }
+
+  @media only screen and ${device.tablet} {
+    max-width: 500px;
+  }
+
+  @media only screen and ${device.mobileM} {
+    width: 320px;
+    border-radius: 0;
+  }
 `
 
 export const Title = styled.h2`
@@ -68,4 +92,16 @@ export const ProductImage = styled.img`
   object-fit: cover;
   border: none;
   border-radius: 30px;
+
+  @media only screen and ${device.laptop} {
+    height: 500px;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  @media only screen and ${device.mobileM} {
+    width: 320px;
+    border-radius: 0;
+  }
 `

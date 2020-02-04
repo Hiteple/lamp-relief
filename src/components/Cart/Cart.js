@@ -54,7 +54,7 @@ const Cart = () => {
       <CartContainer>
         <CartItems>
           {cart.length === 0 && (
-            <div className="cartEmpty">
+            <div style={{ padding: "0 30px" }}>
               <h4>It seems your cart is empty :(</h4>
               <p>Check out our lamps to add something here!</p>
             </div>

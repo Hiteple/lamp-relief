@@ -1,5 +1,6 @@
 // Responsive
 const size = {
+  mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
   tablet: "768px",
@@ -8,6 +9,7 @@ const size = {
 }
 
 export const device = {
+  mobile: `(max-width: ${size.mobile})`,
   mobileM: `(max-width: ${size.mobileM})`,
   mobileL: `(max-width: ${size.mobileL})`,
   tablet: `(max-width: ${size.tablet})`,

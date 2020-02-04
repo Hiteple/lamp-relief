@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import { device } from "../responsive"
 
 const animateUs = keyframes`
    0% {
@@ -26,6 +27,20 @@ export const Container = styled.section`
   display: flex;
   justify-content: space-around;
   min-height: 800px;
+
+  @media only screen and ${device.laptop} {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media only screen and ${device.tablet} {
+    padding-top: 60px;
+    margin: 100px 0 0 0;
+  }
+
+  @media only screen and ${device.mobileM} {
+    padding-top: 120px;
+  }
 `
 
 export const ImageContainer = styled.div`
@@ -34,6 +49,11 @@ export const ImageContainer = styled.div`
   background-position: center;
   height: 600px;
   width: 800px;
+
+  @media only screen and ${device.laptop} {
+    width: 100%;
+  }
+
   & img {
     width: 40rem;
     height: 43rem;
@@ -41,6 +61,16 @@ export const ImageContainer = styled.div`
     border-radius: 30px;
     opacity: 0;
     animation: ${animateUs} 1.5s 1s ease forwards;
+
+    @media only screen and ${device.laptop} {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media only screen and ${device.tablet} {
+      min-width: 100%;
+      border-radius: 0;
+    }
   }
 `
 
@@ -53,5 +83,19 @@ export const AboutText = styled.div`
   padding: 40px 0;
   & p span {
     color: var(--button-color);
+  }
+
+  @media only screen and ${device.laptop} {
+    width: 700px;
+    text-align: center;
+  }
+
+  @media only screen and ${device.tablet} {
+    margin-left: 0;
+    width: 300px;
+  }
+
+  @media only screen and ${device.mobileM} {
+    width: 300px;
   }
 `

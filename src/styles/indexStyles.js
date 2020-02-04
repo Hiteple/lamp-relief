@@ -1,8 +1,6 @@
 import styled, { keyframes } from "styled-components"
 import { device } from "../responsive"
 
-console.log(device)
-
 const animateHeadings = keyframes`
    0% {
       opacity: 0;

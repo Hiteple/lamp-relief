@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import { device } from "../../responsive"
 
 const animateImage = keyframes`
    0% {
@@ -30,6 +31,10 @@ export const SingleProductContainer = styled.section`
   margin-top: 104px;
   padding: 150px 0;
   background-attachment: scroll;
+
+  @media only screen and ${device.laptopL} {
+    justify-content: center;
+  }
 `
 export const SingleProduct = styled.div`
   display: flex;
@@ -53,6 +58,53 @@ export const SingleProduct = styled.div`
       font-size: 25px;
     }
   }
+
+  @media only screen and ${device.laptop} {
+    padding: 100px 0;
+    max-width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+
+    & img {
+      width: 500px;
+      align-self: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    & div {
+      padding: 0 30px;
+      margin-top: 120px;
+    }
+  }
+
+  @media only screen and ${device.tablet} {
+    & img {
+      width: 100%;
+    }
+    & div {
+      text-align: center;
+      padding: 0 30px;
+      margin-top: 120px;
+      margin-left: 0;
+      & h1 {
+        font-size: 40px;
+      }
+      & p {
+        font-size: 25px;
+      }
+    }
+  }
+
+  @media only screen and ${device.mobileM} {
+    & div {
+      & h1 {
+        font-size: 30px;
+      }
+      & p {
+        font-size: 18px;
+      }
+    }
+  }
 `
 
 export const OkButton = styled.button`
@@ -74,4 +126,8 @@ export const OkButton = styled.button`
     color: var(--button-color);
   }
   animation: ${animateButton} 2s 1s ease forwards;
+
+  @media only screen and ${device.tablet} {
+    margin: 30px auto;
+  }
 `
